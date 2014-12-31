@@ -660,7 +660,7 @@ namespace videocore { namespace simpleApi {
         // Add camera source
         m_cameraSource = std::make_shared<videocore::iOS::CameraSource>();
         m_cameraSource->setOrientationLocked(self.orientationLocked);
-        auto aspectTransform = std::make_shared<videocore::AspectTransform>(self.videoSize.width,self.videoSize.height,videocore::AspectTransform::kAspectFit);
+        auto aspectTransform = std::make_shared<videocore::AspectTransform>(self.videoSize.width,self.videoSize.height,videocore::AspectTransform::kAspectFill);
 
         auto positionTransform = std::make_shared<videocore::PositionTransform>(self.videoSize.width/2, self.videoSize.height/2,
                                                                                 self.videoSize.width * self.videoZoomFactor, self.videoSize.height * self.videoZoomFactor,
